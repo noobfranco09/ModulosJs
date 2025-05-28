@@ -4,7 +4,7 @@ export function areaTrianguloRectangulo(cateto1,cateto2)
 {
     if(cateto1 >0 && cateto2>0)
         {
-            return ((cateto1*catreto2)/2)
+            return ((cateto1*cateto2)/2)
         }
         else
         {

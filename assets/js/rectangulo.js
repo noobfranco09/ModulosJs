@@ -1,13 +1,14 @@
 
-export function areaRectangulo(L1,L2)
+export function areaRectangulo(l1,l2)
 {
-    if(L1 >0 && L2>0)
+    if(l1 >0 && l2>0)
         {
-            return (base*altura)
+            return (l1*l2)
         }
         else
         {
             let error="Ingrese una base o una altura mayor de cero";
+            return error;
         }
 }
 
