@@ -1,0 +1,33 @@
+.container
+{
+    background-color:aliceblue;
+}
+
+.error
+{
+    background-color: indianred;
+}
+.correcto
+{
+    background-color:#31a84f;
+}
+
+
+#col1
+{
+    /*para darle sombra a las cards */
+    border:1px solid black;
+    border-radius:22px;
+    box-shadow: 2px 1px 5px;
+
+    /*para que tengan la misma altura y se vean bien */
+    min-height: 300px;
+    margin: 1px;
+    
+}   
+
+
+#rowTitulo
+{
+    height: 150px;
+}

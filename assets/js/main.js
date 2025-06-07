@@ -15,9 +15,26 @@ function resultadoCirculo(e)
     let radioCirculo= document.querySelector('#radio').value;
     let contenedorCirculo=document.querySelector('#colCirculo'); 
     contenedorCirculo.innerHTML = '';
-    col.appendChild(document.createTextNode("El diametro es igual a "+circulo.circuloDiametro(radioCirculo)))
-    row.appendChild(col);
-    contenedorCirculo.appendChild(row);
+    if(circulo.circuloDiametro(radioCirculo) === false  && circulo.circuloArea(radioCirculo) === false && circulo.circuloPerimetro(radioCirculo) === false)
+        {
+            col.classList.add('error')
+            col.appendChild(document.createTextNode('Por favor, llena los campos'));
+            row.appendChild(col);
+            contenedorCirculo.appendChild(row);
+            alert('Por favor,llena todos los campos del formulario del circulo ');
+        }
+        else
+        {
+            col.classList.add('correcto')
+            col.appendChild(document.createTextNode("El diametro es igual a : "+circulo.circuloDiametro(radioCirculo)))
+            col.appendChild(document.createElement('br'))
+            col.appendChild(document.createTextNode("El área es igual a : "+circulo.circuloArea(radioCirculo)))
+            col.appendChild(document.createElement('br'))
+            col.appendChild(document.createTextNode("El perímetro es igual a : "+circulo.circuloPerimetro(radioCirculo)))
+            row.appendChild(col);
+            contenedorCirculo.appendChild(row);
+        }
+
 }
 
 let formRectangulo=document.querySelector('#formRectangulo');
@@ -36,12 +53,28 @@ function resultadoRectangulo(e)
 
     let l1=document.querySelector('#l1').value;
     let l2=document.querySelector('#l2').value;
-    let l3=document.querySelector('#l3').value;
-    let l4=document.querySelector('#l4').value;
 
-    col.appendChild(document.createTextNode("El área del rectangulo es igual a : "+rectangulo.areaRectangulo(l1,l2)));
-    row.appendChild(col);
-    contenedorRectangulo.appendChild(row);
+    if(rectangulo.areaRectangulo(l1,l2) === false && rectangulo.diagonalRectangulo(l1,l2)=== false && rectangulo.perimetroRectangulo(l1,l2) === false)
+        {
+            col.classList.add('error')
+            col.appendChild(document.createTextNode('Por favor, llena los campos'));
+            row.appendChild(col);
+            contenedorRectangulo.appendChild(row);
+            alert('Por favor,llena todos los campos del formulario del rectangulo ');
+        }
+        else
+        {
+            col.classList.add('correcto')
+            col.appendChild(document.createTextNode("El área del rectangulo es igual a : "+rectangulo.areaRectangulo(l1,l2)));
+            col.appendChild(document.createElement('br'));
+            col.appendChild(document.createTextNode("La diagonal del rectangulo es igual a : "+rectangulo.diagonalRectangulo(l1,l2)));
+            col.appendChild(document.createElement('br'));
+            col.appendChild(document.createTextNode("El perímetro del rectangulo es igual a : "+rectangulo.perimetroRectangulo(l1,l2)));
+            col.appendChild(document.createElement('br'));
+            row.appendChild(col);
+            contenedorRectangulo.appendChild(row);
+        }
+    
 }
 
 let formTriangulo=document.querySelector('#formTriangulo');
@@ -58,9 +91,10 @@ function resultadoTriangulo(e)
 
    let col=document.createElement('div');
    col.setAttribute('class','col-12');
-
    let cateto1=document.querySelector('#cateto1').value;
    let cateto2=document.querySelector('#cateto2').value;
+
+   
 
    col.appendChild(document.createTextNode("El área del triángulo es : "+ triangulorectangulo.areaTrianguloRectangulo(cateto1,cateto2)));
    row.appendChild(col);

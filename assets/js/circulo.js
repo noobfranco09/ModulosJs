@@ -1,31 +1,31 @@
 
 const pi=3.1416;
-export const error="Ingrese un radio válido";
+
 
 export function circuloDiametro(radio)
 {
    
-    if(radio>0)
+    if(radio>0 && radio !== null)
         {
             return (2*radio)
         }
         else
         {
-            return error
+            return false;
         }
 }
 
-export function circuloArea()
+export function circuloArea(radio)
 {
     //pi por radio al cuadrado
-    if(radio>0)
+    if(radio>0 && radio !== null )
         {
             return (pi*(radio*radio));
         }
         else
         {
             
-            return error;
+            return false; 
         }
 
 }
@@ -33,13 +33,13 @@ export function circuloArea()
 export function circuloPerimetro(radio)
 {
     // 2 por pi por el radio
-    if(radio>0)
+    if(radio>0 && radio !== null)
         {
             return (2*(pi*radio));
         }
         else
         {
             
-            return error;
+            return false;
         }
 }

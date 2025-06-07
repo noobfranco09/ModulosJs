@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/estilo.css">
 </head>
 <body>
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-4 d-flex align-items-center " >
+        <div class="row  d-flex justify-content-center  align-items-center  " id="rowTitulo">
+            <div class="col-12 d-flex justify-content-center  align-items-center">
+                <h1>FIGURAS GEOMÉTRICAS</h1>
+            </div>
+        </div>
+        <div class="row justify-content-around align-items-start  " style="min-height: 100vh;">
+            <div class="col-10 col-md-3 d-flex justify-content-center align-items-start m-1 p-1 " id="col1">
                 <form action="" id="formCirculo">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 ">
                             <h3>CIRCULO</h3>
                         </div>
                     </div>
@@ -23,12 +29,12 @@
                     <div class="mb-3">
                         <button class="btn bg-primary" type="submit" id="btnCirculo">Calcular</button>
                     </div>
-                    <div class="mb-3" id="colCirculo" ></div>
+                    <div class="mb-3 p-2 " id="colCirculo" ></div>
                 </form>
                 
             </div>
 
-            <div class="col-4  d-flex align-items-center">
+            <div class="col-10 col-md-3 d-flex justify-content-center  align-items-start m-1 p-1" id="col1" >
                 <form action=""  id="formRectangulo">
                     <div class="row">
                         <div class="col-12">
@@ -36,20 +42,12 @@
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="l1" class="form-label">Lado 1 (Izquierdo)</label>
+                        <label for="l1" class="form-label">Lado 1 (vertical)</label>
                         <input type="number" class="form-control" id="l1" >
                     </div>
                     <div class="mb-3">
-                        <label for="l2" class="form-label">Lado 2 (Arriba)</label>
+                        <label for="l2" class="form-label">Lado 2 (horizontal)</label>
                         <input type="number" class="form-control" id="l2" >
-                    </div>
-                    <div class="mb-3">
-                        <label for="l3" class="form-label">Lado 3 (Derecho)</label>
-                        <input type="number" class="form-control" id="l3" >
-                    </div>
-                    <div class="mb-3">
-                        <label for="l4" class="form-label">Lado 4 (Abajo)</label>
-                        <input type="number" class="form-control" id="l4" >
                     </div>
                     <div class="mb-3">
                         <button class="btn bg-primary" type="submit" id="btnRectangulo">Calcular</button>
@@ -58,7 +56,7 @@
                 </form>
             </div>
 
-            <div class="col-4  d-flex align-items-center">
+            <div class="col-10 col-md-3 d-flex justify-content-center  align-items-start  m-1 p-1" id="col1">
                 <form action=""  id="formTriangulo">
                     <div class="row">
                         <div class="col-12">
